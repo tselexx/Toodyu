@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mode_emploi"
+        android:title="mode d'emploi"
+        android:icon="@drawable/ic_help_black_24dp"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/supprimer"
+        android:title="partager TodYu"
+        android:icon="@mipmap/ic_delete_foreground"
+        app:showAsAction="always"
+
+        />
+    <item
+        app:showAsAction="never"
+        app:actionViewClass="android.widget.CheckBox"
+        android:id="@+id/syncAgenda"
+        android:checkable="true"
+        android:title="@string/sync_agenda" >
+
+    </item>
+</menu>

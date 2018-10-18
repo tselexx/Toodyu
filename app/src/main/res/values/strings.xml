@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Tood\'Yu</string>
+    <string name="info100">
+        1)  Way of Use
+        \n\n1.1)  This application is a  driven by voice \"todo list\" allowing to create new text events from your voice and if wanted synchronise them with your favorite calendar app (see Menu).
+        \n\n1.2)  To use, you select a date = or > to the current date, you choose a time and you can record your event.
+        \n\n2) Calendar Screen.
+        \n\n2.1)  current date without event  : blue and red
+        \n\n2.2)  current date with event  : dark blue
+        \n\n2.3)  date with event > current date  : light blue
+        \n\n2.4)  date with event \u003C current date : yellow
+        \n\n2.5)  click on date with event : displaying of events list screen for the date.
+        \n\n2.6)  click on date without event = ou > current date : you start a new event recording session.
+        \n\n3) Events List Screen.
+        \n\n3.1)  list of a date = or >  current date : You may click an event to modify or suppress it.
+        \n\n3.2)  list of a date = or >  current date : You may record a new event for the date.
+        \n\n3.3)  list of a date \u003C  current date : You may click an event to suppress it.
+        \n\n4) Event Updating Screen.
+        \n\n4.1)  You may modify the time AND the text of the event.
+        \n\n5) Menu.
+        \n\n5.1)  You may delete all the events \u003C to a selected date.
+        \n\n5.2)  You may synchronised your new created event with your favorite calendar app.
+    </string>
+    <string name="explications">Way of Use</string>
+    <string name="confirm_modif">UPDATE CONFIRMATION</string>
+    <string name="separator_event">\u0020:\u0020</string>
+    <string name="record_new_event">Record a New Event</string>
+    <string name="backstack_calendrier">Calendrier</string>
+    <string name="time_sup">The time must be > to the current time</string>
+    <string name="recording">RECORDING</string>
+    <string name="recording_button_ok">Click \'OK\' to record a new event</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="to_speek">You may speek ...</string>
+    <string name="smartphone_dont_fit">Sorry, your smartphone isn\'t fit for voice recording...</string>
+    <string name="modif_suppr_msg">Update or Delete</string>
+    <string name="lib_du">Date and time of the event\n</string>
+    <string name="slash">/</string>
+    <string name="lib_pour">\u0020at\u0020</string>
+    <string name="lib_h">H</string>
+    <string name="lib_le">Date :\u0020</string>
+
+    <string name="EDIT">EDIT</string>
+    <string name="SUPPR">SUPPR</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="backstack_listemsg">Listemsg</string>
+    <string name="msg_mandatory">Please enter a text</string>
+    <string name="update_nothing">You didn\'t do any modification</string>
+    <string name="modif_msg">Modify time and/or text of event of\n</string>
+    <string name="date_sup">You can\'t select a date \u003C to current date</string>
+    <string name="conf_suppr">Confirmation of Suppression</string>
+    <string name="mind_suppr">BEWARE you are going to suppress all the events \u003C to\u0020</string>
+    <string name="choose_time">Please choose the time</string>
+    <string name="date_del">choose a date \u003C or = to the current date</string>
+    <string name="choose_date">all the events \u003C to the selected date shall be deleted</string>
+    <string name="supp_event">Suppression of Event</string>
+    <string name="conf_supp">Delete</string>
+    <string name="sync_agenda">synchronization with agenda</string>
+    <string name="sync_title">Tood\'Yu Event</string>
+
+
+
+</resources>

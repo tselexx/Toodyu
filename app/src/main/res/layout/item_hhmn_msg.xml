@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borderitem"
+    android:weightSum="7">
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:textSize="15sp"
+        android:textAlignment="viewStart"
+        android:layout_gravity="start"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:textAlignment="viewStart"
+        android:layout_gravity="start"
+        android:text="@string/separator_event"
+        android:textSize="15sp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/item_msg"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:textAlignment="viewStart"
+        android:layout_gravity="start"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"  />
+</LinearLayout>
