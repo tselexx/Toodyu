@@ -5,12 +5,8 @@
     <size
         android:width="15dp"
         android:height="15dp"/>
-    <gradient
-        android:startColor="#00ddff"
-        android:endColor="#00000000"
-        android:angle="45"/>
-    <!--<solid-->
-        <!--android:color="#ffb700"/>-->
+    <solid
+        android:color="@color/color_cur"/>
 
     <stroke
         android:width="0.5dp"

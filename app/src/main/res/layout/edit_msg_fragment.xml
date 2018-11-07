@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
+        android:weightSum="1"
         android:background="@drawable/borderedit">
+        <TextView
+            android:id="@+id/editmsg_title"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal|center_vertical"
+            android:textStyle="bold"
+            android:background="@drawable/drawable_gradient_animation_list"
+            android:textSize="15sp"/>
         <android.support.v7.widget.CardView
             android:background="@drawable/bordercalendar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
             android:layout_margin="5dp"
             android:layout_gravity="center">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -21,51 +37,99 @@
                 android:weightSum="1">
 
                 <TextView
-                    android:id="@+id/edit_msg_textView_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.15"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:background="@drawable/bordertitre"
-                    android:textSize="15sp"/>
-
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/modif_date"
+                    android:background="@drawable/bordersmall"
+                    android:textSize="10sp"/>
 
                 <TextView
-                    android:id="@+id/edit_msg_textView_hhmn"
-                    android:layout_margin="5dp"
+                    android:id="@+id/edit_msg_textView_date"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.1"
-                    android:textAlignment="center"
-                    android:background="@drawable/borderbutton"
+                    android:gravity="center"
+                    android:background="@drawable/bordermodif"
                     android:textSize="20sp"/>
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/modif_time"
+                    android:background="@drawable/bordersmall"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/edit_msg_textView_hhmn"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:background="@drawable/bordermodif"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"
+                    android:gravity="center"
+                    android:text="@string/modif_text"
+                    android:background="@drawable/bordersmall"
+                    android:textSize="10sp"/>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     app:cardElevation="@dimen/cardview_default_elevation"
                     android:layout_height="0dp"
                     android:layout_weight="0.65"
-                    android:layout_margin="5dp">
-
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp">
                     <EditText
                         android:id="@+id/edit_msg_editText"
                         android:layout_width="match_parent"
-                        android:padding="5dp"
+                        android:padding="15dp"
                         android:layout_height="match_parent"
-                        android:textAlignment="center"
-                        android:background="#4300ffd0"
+                        android:gravity="top"
+                        android:imeOptions="actionDone"
+                        android:imeActionLabel="Done"
+                        android:singleLine="true"
+                        android:background="@drawable/bordermodif"
                         android:textSize="15sp"/>
                 </android.support.v7.widget.CardView>
 
-                <Button
-                    android:id="@+id/edit_msg_button"
-                    android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                    android:visibility="invisible"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.1"
-                    android:background="@drawable/borderbutton"
-                    android:text="@string/confirm_modif"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_floating_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/BLUE"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/baseline_done_outline_white_24dp" />
+
+</android.support.design.widget.CoordinatorLayout>

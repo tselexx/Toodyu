@@ -9,4 +9,5 @@
         <item name="android:windowBackground">@drawable/alertdialog</item>
     </style>
 
+
 </resources>

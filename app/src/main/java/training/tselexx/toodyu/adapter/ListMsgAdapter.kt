@@ -5,14 +5,25 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import com.tselexx.toodyu.Common_Util_functions.Companion.calendar
+import com.tselexx.toodyu.Common_Util_functions.Companion.dayDateOfDay
+import com.tselexx.toodyu.Common_Util_functions.Companion.dayDateSelected
+import com.tselexx.toodyu.Common_Util_functions.Companion.hourDateOfDay
+import com.tselexx.toodyu.Common_Util_functions.Companion.minuteDateOfDay
+import com.tselexx.toodyu.Common_Util_functions.Companion.monthDateOfDay
+import com.tselexx.toodyu.Common_Util_functions.Companion.monthDateSelected
+import com.tselexx.toodyu.Common_Util_functions.Companion.yearDateOfDay
+import com.tselexx.toodyu.Common_Util_functions.Companion.yearDateSelected
 import com.tselexx.toodyu.R
 import com.tselexx.toodyu.model.ModelHmMsg
+import java.util.*
 
 
 class ListMsgAdapter(val modelhmmsg : ArrayList<ModelHmMsg>,
-                     val itemListener  : (ModelHmMsg) -> Unit):
-        RecyclerView.Adapter<ListMsgAdapter.MyViewHolder>() {
+                     val itemListener  : (ModelHmMsg) -> Unit)
+    : RecyclerView.Adapter<ListMsgAdapter.MyViewHolder>() {
 
 
 
@@ -25,6 +36,7 @@ class ListMsgAdapter(val modelhmmsg : ArrayList<ModelHmMsg>,
         )
         return MyViewHolder(itemview)
     }
+
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int)
     {
@@ -42,24 +54,37 @@ class ListMsgAdapter(val modelhmmsg : ArrayList<ModelHmMsg>,
     {
         private var hmaff = itemView.findViewById<TextView>(R.id.item_date)
         private var msgaff =  itemView.findViewById<TextView>(R.id.item_msg)
+        private var llayout =  itemView.findViewById<LinearLayout>(R.id.item_layout)
+
 
         fun bindItem(modelhmmsg: ModelHmMsg) = with (itemView){
             var tempstring = modelhmmsg.eventmn.toString()
-            if (tempstring == "0") tempstring = "00"
-            if (tempstring == "1") tempstring = "01"
-            if (tempstring == "2") tempstring = "02"
-            if (tempstring == "3") tempstring = "03"
-            if (tempstring == "4") tempstring = "04"
-            if (tempstring == "5") tempstring = "05"
-            if (tempstring == "6") tempstring = "06"
-            if (tempstring == "7") tempstring = "07"
-            if (tempstring == "8") tempstring = "08"
-            if (tempstring == "9") tempstring = "09"
-            tempstring = modelhmmsg.eventhh.toString()  + " H " + tempstring
+            if(modelhmmsg.eventmn in 0..9){
+                tempstring = modelhmmsg.eventhh.toString()  + " H " + "0" + tempstring
+            }else
+                tempstring = modelhmmsg.eventhh.toString()  + " H " + tempstring
+
+            setBackgroundItem(llayout,modelhmmsg.eventhh, modelhmmsg.eventmn)
+
             hmaff.setText(tempstring)
             msgaff.setText(modelhmmsg.eventmsg)
             setOnClickListener { itemListener(modelhmmsg)}
+        }
+    }
+    private fun setBackgroundItem(llayout : LinearLayout, hh: Int, mn : Int) {
+        calendar = Calendar.getInstance()
+        hourDateOfDay = calendar!!.get(Calendar.HOUR_OF_DAY)
+        minuteDateOfDay = calendar!!.get(Calendar.MINUTE)
 
+        if((yearDateSelected < yearDateOfDay) ||
+                (yearDateSelected == yearDateOfDay && monthDateSelected < monthDateOfDay) ||
+                (yearDateSelected == yearDateOfDay && monthDateSelected == monthDateOfDay && dayDateSelected < dayDateOfDay) ||
+                (yearDateSelected == yearDateOfDay && monthDateSelected == monthDateOfDay && dayDateSelected == dayDateOfDay
+                        && hh < hourDateOfDay) ||
+                (yearDateSelected == yearDateOfDay && monthDateSelected == monthDateOfDay && dayDateSelected == dayDateOfDay
+                        && hh == hourDateOfDay && mn <= minuteDateOfDay))
+        {
+            llayout.setBackgroundResource(R.drawable.borderitemprev)
         }
     }
 }

@@ -12,16 +12,16 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 public interface MyDao {
 
     @Insert (onConflict = REPLACE)
-    public void addEvent(Event event);
+    void addEvent(Event event);
 
     @Query("select * from events")
-    public List<Event> getEvents();
+    List<Event> getEvents();
 
 
     @Query("SELECT * FROM events WHERE col_year = :year  AND " +
             " col_month = :month  AND  col_day = :day " +
             " ORDER BY col_hour, col_minute, col_stamp" )
-    public List<Event> findEventWithDate(int year, int month, int day);
+    List<Event> findEventWithDate(int year, int month, int day);
 
 
 
@@ -32,7 +32,7 @@ public interface MyDao {
             " OR " +
             "(col_year = :year AND col_month = :month AND  col_day < :day)"
     )
-    public void deletePreviousEvents(int year, int month, int day);
+    void deletePreviousEvents(int year, int month, int day);
 
 
 
@@ -40,26 +40,28 @@ public interface MyDao {
             " col_month = :month  AND  col_day = :day  AND " +
             " col_hour = :hour AND col_minute = :minute AND " +
             " col_stamp = :stamp")
-    public void deleteEvent(int year, int month, int day, int hour, int minute, Long stamp);
+    void deleteEvent(int year, int month, int day, int hour, int minute, Long stamp);
 
 
-    @Query("UPDATE events SET col_hour= :newhour, col_minute = :newminute, col_message = :newmessage " +
+    @Query("UPDATE events SET " +
+            "col_year = :newyear, col_month = :newmonth, col_day = :newday, " +
+            "col_hour = :newhour, col_minute = :newminute, col_message = :newmessage " +
             "WHERE col_year = :year AND col_month = :month " +
             "AND col_day = :day AND col_hour = :hour " +
             "AND col_minute = :minute AND col_stamp = :stamp")
-    public void updateEvent(int year, int month, int day, int hour, int minute, Long stamp,
+    void updateEvent(int year, int month, int day, int hour, int minute, Long stamp,
+                            int newyear, int newmonth, int newday,
                             int newhour, int newminute, String newmessage);
 
-
     @Insert (onConflict = REPLACE)
-    public void addAgenda(Agenda agenda);
+    void addAgenda(Agenda agenda);
 
 
     @Query("select * from agenda")
-    public Agenda getAgenda();
+    Agenda getAgenda();
 
     @Query("UPDATE agenda SET col_sync_agenda = :new_sync_agenda")
-    public void updateAgenda(boolean new_sync_agenda);
+    void updateAgenda(boolean new_sync_agenda);
 
 }
 

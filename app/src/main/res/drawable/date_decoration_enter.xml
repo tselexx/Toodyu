@@ -2,13 +2,8 @@
 <shape
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <gradient
-        android:startColor="#3c41a1"
-        android:endColor="#ff0000"
-
-        android:angle="45"/>
-    <!--<solid-->
-        <!--android:color="#3c41a1"/>-->
+    <solid
+        android:color="@color/color_jour_gradient"/>
 
     <size
         android:width="15dp"

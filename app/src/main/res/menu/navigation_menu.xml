@@ -5,15 +5,14 @@
     <item
         android:id="@+id/mode_emploi"
         android:title="mode d'emploi"
-        android:icon="@drawable/ic_help_black_24dp"
+        android:icon="@drawable/interrogation"
         app:showAsAction="always"
         />
     <item
         android:id="@+id/supprimer"
-        android:title="partager TodYu"
-        android:icon="@mipmap/ic_delete_foreground"
+        android:title="supprimer"
+        android:icon="@drawable/ibroyeur"
         app:showAsAction="always"
-
         />
     <item
         app:showAsAction="never"

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_prev">#FFFFFF00</color>
+    <color name="color_jour">#FF3C41A1</color>
+    <color name="color_jour_gradient">#FFFF0000</color>
+    <color name="color_cur">#FF00DDFF</color>
+</resources>

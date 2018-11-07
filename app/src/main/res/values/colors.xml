@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="BLUE">#0303a9</color>
-    <color name="GREEN">#00FF00</color>
+    <color name="BLUE">#5aaaff</color>
     <color name="PINK">#ff0077</color>
+    <color name="color_prev">#9effff00</color>
 
+    <color name="color_jour">#3244cc</color>
+    <color name="color_jour_gradient">#FFFF0000</color>
+    <color name="color_cur">#FF00DDFF</color>
+
+
+    <!-- blue Gradient color -->
+    <color name="colorblue_start">#4300ffd0</color>
+    <color name="colorblue_end">#427e8e</color>
+    <!-- blue Gradient color -->
+    <color name="colordate_start">#427e8e</color>
+    <color name="colordate_end">#4300ffd0</color>
 
 </resources>

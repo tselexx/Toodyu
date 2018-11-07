@@ -5,59 +5,64 @@
         \n\n1.1)  L\'application est de type \"todo list\"  et permet de créer en texte des évènements à partir de votre voix et éventuellement de les synchroniser avec votre application calendrier favorite (voir Menu).
         \n\n1.2)  Vous sélectionnez une date = ou > à la date du jour, choisisssez un horaire et vous pouvez enregistrer votre évènement.
 
-        \n\n2) Ecran calendrier
-        \n\n2.1)  date du jour sans évènement  : bleu et rouge
-        \n\n2.2)  date du jour avec évènement  : bleu foncé
+        \n\n2) Ecran SELECTION D\'UNE DATE
+        \n\n2.1)  date du jour sans évènement  : bleu foncé
+        \n\n2.2)  date du jour avec évènement  : rouge
         \n\n2.3)  date avec évènement > date du jour  : bleu clair
         \n\n2.4)  date avec évènement \u003C date du jour : jaune
-        \n\n2.5)  click sur une date avec évènement : affichage de la liste des évènements pour la date.
+        \n\n2.5)  click sur une date avec évènement : affichage de l\'écran SELECTION D\'UN EVENEMENT pour la date.
         \n\n2.6)  click sur une date sans évènement = ou > date du jour : vous débuter l\'enregistrement d\'un nouvel évènement
-        \n\n3) Ecran liste des évènement
-        \n\n3.1)  liste d\'une date = ou > date du jour : vous pouvez clicker sur un évènement pour le modifier ou le supprimer.
-        \n\n3.2)  liste d\'une date = ou > date du jour : Vous pouvez enregistrer un nouvel évènement pour la date.
-        \n\n3.3)  liste d\'une date \u003C date du jour : vous pouvez clicker sur un évènement pour le supprimer.
-        \n\n4) Ecran modification d\'un évènement.
-        \n\n4.1)  Vous pouvez modifier l\'horaire ET le texte de l\'évènement.
+        \n\n3) Ecran SELECTION D\'UN EVENEMENT
+        \n\n3.1)  vous pouvez clicker sur un évènement pour afficher l\'écran DETAILS D\'UN EVENEMENT.
+        \n\n3.2)  liste d\'une date = ou > date du jour : Vous pouvez créer un nouvel évènement pour la date.
+        \n\n4) Ecran DETAILS D\'UN EVENEMENT
+        \n\n4.1)  Vous pouvez modifier la date ET l\'horaire ET le texte de l\'évènement.
+        \n\n4.2)  Vous pouvez supprimer l\'évènement.
+        \n\n4.3)  les évènements dont la date et l\'horaire sont dépassés sont en jaune.
         \n\n5) Menu
         \n\n5.1)  Vous pouvez supprimer tous les évènements \u003C à une date sélectionnée.
-        \n\n5.2)  Vous pouvez synchroniser les évènements en création avec votre application de calendrier favorite.
+        \n\n5.2)  sur l\'écran DETAILS D\'UN EVENEMENT Vous pouvez supprimer l\'évènement.
+        \n\n5.3)  Vous pouvez synchroniser les évènements en création avec votre application de calendrier favorite.
     </string>
     <string name="explications">Mode d\'Emploi</string>
 
-    <string name="confirm_modif">CONFIRMEZ LA MODIFICATION</string>
     <string name="separator_event">\u0020:\u0020</string>
-    <string name="record_new_event">Enregitrez un nouvel évènement</string>
     <string name="backstack_calendrier">Calendrier</string>
     <string name="time_sup">L\'horaire doit être > à l\'horaire en cours</string>
-    <string name="recording">ENREGISTREMENT</string>
-    <string name="recording_button_ok">Appuyez sur \'OK\' pour enregistrer un nouvel évènement</string>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
     <string name="to_speek">Vous pouvez parler ...</string>
     <string name="smartphone_dont_fit">Desole, votre appareil ne supporte pas d\'entree vocale...</string>
-    <string name="modif_suppr_msg">Modification ou Suppression</string>
     <string name="lib_du">Date et horaire de l\'évènement\n</string>
-    <string name="slash">/</string>
-    <string name="lib_pour">\u0020pour\u0020</string>
-    <string name="lib_h">H</string>
     <string name="lib_le">Date :\u0020</string>
 
-    <string name="EDIT">EDIT</string>
     <string name="SUPPR">SUPPR</string>
-    <string name="CANCEL">CANCEL</string>
+    <string name="CANCEL">ANNULER</string>
     <string name="backstack_listemsg">Listemsg</string>
     <string name="msg_mandatory">veuillez saisir un texte</string>
-    <string name="update_nothing">vous n\'avez fait aucune modification</string>
-    <string name="modif_msg">Modification de l\'horaire ou/et du texte de l\'évènement du</string>
     <string name="date_sup">vous ne pouvez pas sélectionner \n une date \u003C à la date du jour</string>
     <string name="conf_suppr">Confirmation de Suppression</string>
-    <string name="mind_suppr">ATTENTION vous allez supprimer tous les évènements \u003C au\u0020</string>
-    <string name="choose_time">Veuillez choisir l\'horaire</string>
     <string name="date_del">vous devez choisir une date \u003C ou = à la date du jour</string>
     <string name="choose_date">Tous les évènements \u003C à la date sélectionnée seront supprimés</string>
-    <string name="supp_event">Suppression d\'Evènements</string>
-    <string name="conf_supp">Suppression</string>
     <string name="sync_agenda">synchronisation avec l\'agenda</string>
     <string name="sync_title">Evènement Tood\'Yu</string>
+    <string name="date_mod">choisissez une date > or = à la date du jour</string>
+    <string name="nothing_mod">Vous n\'avez rien modifié</string>
+
+    <string name="modif_date">date</string>
+    <string name="modif_time">horaire</string>
+    <string name="modif_text">texte</string>
+
+    <string name="sel_date">SELECTION D\'UNE DATE</string>
+    <string name="sel_event">SELECTION D\'UN EVENEMENT</string>
+    <string name="det_event">DETAILS D\'UN EVENEMENT</string>
+    <string name="cre_event">CREATION D\'UN EVENEMENT</string>
+    <string name="choose_time">Veuillez choisir l\'horaire</string>
+    <string name="mod_event">MODIFICATION DE LA DATE</string>
+    <string name="modif_msg">MODIFICATION DE L\'HORAIRE</string>
+    <string name="conf_supp">SUPPRESSION</string>
+    <string name="supp_event">SUPPRESSION MASSIVE</string>
+    <string name="mind_suppr">ATTENTION vous allez supprimer tous les évènements \u003C au\n</string>
+
+
 
 </resources>
