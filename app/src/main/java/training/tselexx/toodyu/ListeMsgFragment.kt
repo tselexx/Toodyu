@@ -216,8 +216,8 @@ class ListeMsgFragment : Fragment(), IOnBackPressed {
 
         try {
             startActivityForResult(intent, REQUEST_CODE_CALENDRIER)
-        } catch (a: ActivityNotFoundException) {
-            Toast.makeText(contx, contx!!.getString(R.string.smartphone_dont_fit), Toast.LENGTH_SHORT).show()
+        } catch (a : ActivityNotFoundException) {
+            throw ActivityNotFoundException(getString(R.string.smartphone_dont_fit))
         }
     }
 

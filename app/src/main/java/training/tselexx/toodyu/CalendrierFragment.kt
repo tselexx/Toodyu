@@ -201,9 +201,15 @@ class CalendrierFragment : Fragment(), IOnBackPressed
         eventdatePrev.clear()
         eventdateJour.clear()
 
+
+
         if (eventList.isNotEmpty() )
         {
-            eventList.forEach {
+            val sortedList = eventList
+                    .sortedWith(compareBy<ModelCatEvent> { it.catEvent_year }.thenBy { it.catEvent_month }.thenBy { it.catEvent_day })
+                    .distinctBy { Triple(it.catEvent_year,it.catEvent_month,it.catEvent_day)}
+
+            sortedList.forEach {
                 calendarDay = CalendarDay.from(it.catEvent_year,it.catEvent_month - 1,it.catEvent_day)
 
                 when(it.catEvent_cat)
@@ -399,10 +405,14 @@ class CalendrierFragment : Fragment(), IOnBackPressed
 
         try {
             startActivityForResult(intent, REQUEST_CODE_CALENDRIER)
-        } catch (a: ActivityNotFoundException) {
-            Toast.makeText(contx, contx!!.getString(R.string.smartphone_dont_fit), Toast.LENGTH_SHORT).show()
+
+        } catch (a : ActivityNotFoundException) {
+            throw ActivityNotFoundException(getString(R.string.smartphone_dont_fit))
+//            Toast.makeText(contx, contx!!.getString(R.string.smartphone_dont_fit), Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 //        super.onActivityResult(requestCode, resultCode, data)
@@ -485,7 +495,7 @@ class CalendrierFragment : Fragment(), IOnBackPressed
                 .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis())
                 .putExtra(CalendarContract.Events.TITLE, message)
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
-        startActivity(intent);
+        startActivity(intent)
     }
 }
 
