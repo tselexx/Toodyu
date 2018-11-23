@@ -1,0 +1,61 @@
+you may fork the project for your own language or send me the translations for
+
+    <string name="info100">
+        1)  Way of Use
+        \n\n1.1)  This application is a  driven by voice \"todo list\" allowing to create new text events from your voice and if wanted synchronise them with your favorite calendar app (see Menu).
+        \n\n1.2)  To use, you select a date = or > to the current date, you choose a time and you can record your event.
+        \n\n2) Screen SELECTION OF A DATE.
+        \n\n2.1)  current date without event  : dark blue
+        \n\n2.2)  current date with event  : red
+        \n\n2.3)  date with event > current date  : light blue
+        \n\n2.4)  date with event \u003C current date : yellow
+        \n\n2.5)  click on date with event : displaying screen SELECTION OF AN EVENT for the date.
+        \n\n2.6)  click on date without event = ou > current date : you start a new event recording session.
+        \n\n3) Screen SELECTION OF AN EVENT.
+        \n\n3.1)  You may click an event to display screen DETAILS OF AN EVENT.
+        \n\n3.2)  list of a date = or >  current date : You may record a new event for the date.
+        \n\n4) Screen DETAILS OF AN EVENT.
+        \n\n4.1)  You may modify the date AND the time AND the text of the event.
+        \n\n4.2)  You may suppress the event.
+        \n\n4.3)  the date and time passed events are in yellow.
+        \n\n5) Menu.
+        \n\n5.1)  You may delete all the events \u003C to a selected date.
+        \n\n5.2)  on screen DETAILS OF AN EVENT You may suppress the event.
+        \n\n5.3)  You may synchronised your new created event with your favorite calendar app.
+    </string>
+    <string name="explications">Way of Use</string>
+    <string name="time_sup">The time must be > to the current time</string>
+    <string name="ok">OK</string>
+    <string name="to_speek">You may speek ...</string>
+    <string name="smartphone_dont_fit">Sorry, your smartphone isn\'t fit for voice recording...</string>
+    <string name="lib_du">Date and time of the event\n</string>
+    <string name="lib_le">Date :\u0020</string>
+
+    <string name="SUPPR">SUPPR</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="msg_mandatory">Please enter a text</string>
+    <string name="date_sup">You can\'t select a date \u003C to current date</string>
+    <string name="conf_suppr">Confirmation of Suppression</string>
+    <string name="date_del">choose a date \u003C or = to the current date</string>
+    <string name="choose_date">all the events \u003C to the selected date shall be deleted</string>
+    <string name="conf_supp">Delete</string>
+    <string name="sync_agenda">synchronization with agenda</string>
+    <string name="sync_title">Tood\'Yu Event</string>
+    <string name="date_mod">choose a date > or = to the current date</string>
+    <string name="nothing_mod">You didn\'t modify anything</string>
+
+    <string name="modif_date">date</string>
+    <string name="modif_time">time</string>
+    <string name="modif_text">text</string>
+
+
+
+    <string name="sel_date">SELECTION OF A DATE</string>
+    <string name="sel_event">SELECTION OF AN EVENT</string>
+    <string name="det_event">DETAILS OF AN EVENT</string>
+    <string name="cre_event">CREATION OF AN EVENT</string>
+    <string name="choose_time">Please choose the time</string>
+    <string name="mod_event">MODIFICATION OF THE DATE</string>
+    <string name="modif_msg">MODIFICATION OF THE TIME</string>
+    <string name="supp_event">MASSIVE SUPPRESSION</string>
+    <string name="mind_suppr">BEWARE you are going to suppress all the events \u003C to\n</string>
